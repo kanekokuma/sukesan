@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: sukesan-quiz
+    runtime: python
+    plan: free
+    buildCommand: ./build.sh
+    startCommand: gunicorn sukesan_quiz.wsgi:application
+    healthCheckPath: /
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: "False"
+      - key: PYTHON_VERSION
+        value: "3.13.5"
