@@ -1,0 +1,14 @@
+{% extends "quiz/base.html" %}
+
+{% block refresh %}
+<meta http-equiv="refresh" content="3; url=/">
+{% endblock %}
+
+{% block content %}
+<section class="panel result-panel correct-result">
+    <p class="eyebrow">結果</p>
+    <h1>正解！</h1>
+    <p class="message">スケさんは39歳です。</p>
+    <p class="return-note">3秒後にタイトル画面へ戻ります。</p>
+</section>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "quiz/base.html" %}
+
+{% block content %}
+<section class="panel quiz-panel">
+    <p class="eyebrow">もんだい</p>
+    <h1>スケさんは39歳である！<br>○か？×か？</h1>
+    <div class="answer-buttons" aria-label="回答">
+        <a class="button answer-button correct" href="{% url 'correct' %}">○</a>
+        <a class="button answer-button wrong" href="{% url 'wrong' %}">×</a>
+    </div>
+</section>
+{% endblock %}
